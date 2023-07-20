@@ -28,6 +28,7 @@ Vue.createApp({
             ],
             
             activeIndex: 0,
+            autoplay: null,
         }
     },
 
@@ -49,10 +50,19 @@ Vue.createApp({
         onClickThumb(imageindex){
             this.activeIndex = imageindex;            
         },
+
+
+        clickhover(){
+            clearInterval(this.autoplay);
+        },
+
+        clickout(){
+            this.autoplay = setInterval(this.onClickNext, 3000);
+        }
     }, 
 
     mounted(){
-        setInterval(this.onClickNext, 3000);
+        this.autoplay = setInterval(this.onClickNext, 3000);
     }
 }).mount('#app')
 
