@@ -49,6 +49,10 @@ Vue.createApp({
         onClickThumb(imageindex){
             this.activeIndex = imageindex;            
         },
+    }, 
+
+    mounted(){
+        setInterval(this.onClickNext, 3000);
     }
 }).mount('#app')
 
