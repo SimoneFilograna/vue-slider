@@ -30,6 +30,7 @@ Vue.createApp({
             activeIndex: 0,
         }
     },
+
     methods: {
         onClickNext(imageIndex){
             this.activeIndex++;
@@ -43,7 +44,7 @@ Vue.createApp({
             if(this.activeIndex < 0){
                 this.activeIndex = this.slides.length - 1;
             }
-        }
+        },
     }
 }).mount('#app')
 
