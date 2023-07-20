@@ -45,6 +45,10 @@ Vue.createApp({
                 this.activeIndex = this.slides.length - 1;
             }
         },
+
+        onClickThumb(imageindex){
+            this.activeIndex = imageindex;            
+        },
     }
 }).mount('#app')
 
