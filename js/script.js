@@ -33,14 +33,14 @@ Vue.createApp({
     },
 
     methods: {
-        onClickNext(imageIndex){
+        onClickNext(){
             this.activeIndex++;
             if(this.activeIndex > this.slides.length - 1){
                 this.activeIndex = 0;
             }
         },
 
-        onClickPrev(imageIndex){
+        onClickPrev(){
             this.activeIndex--;
             if(this.activeIndex < 0){
                 this.activeIndex = this.slides.length - 1;
