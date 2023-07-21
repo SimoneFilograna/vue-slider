@@ -66,5 +66,6 @@ Vue.createApp({
     }
 }).mount('#app')
 
-
+// per evitare di scrivere codice ripetitivo è possibile scrivere la funzione
+//setInterval nei methods e poi richiamarla
 
